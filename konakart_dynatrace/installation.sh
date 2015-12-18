@@ -26,7 +26,7 @@ DB_TYPE="mysql"
     fi
     echo "Installing ......"
     #Run manual KonaKart installation
-    /tmp/konakart-installation -S -DJavaJRE /usr/lib/jvm/java-1.7.0-openjdk-amd64 -DDatabaseType "$DB_TYPE" -DDatabaseUrl jdbc:"$DB_TYPE"://"$DB_ADDRESS":"$DB_PORT"/konakart?zeroDateTimeBehavior=convertToNull -DDatabaseUsername root -DDatabasePassword "$DB_PWD"
+    /tmp/konakart-installation -S -DJavaJRE /usr/lib/jvm/java-1.7.0-openjdk-amd64 -DDatabaseType "$DB_TYPE" -DDatabaseUrl jdbc:"$DB_TYPE"://"$DB_ADDRESS":"$DB_PORT"/konakart?zeroDateTimeBehavior=convertToNull -DDatabaseUsername "$DB_USER" -DDatabasePassword "$DB_PASS"
     sleep 10s   
     echo "...... Finished installing."
 fi
