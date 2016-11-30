@@ -6,7 +6,7 @@ CMD echo "Adding installation script"
 
 ADD ./installation.sh /opt/
 ADD ./konakart-installation /tmp/
-ADD ./dynatrace-agent-6.2.jar /opt/
+ADD ./dynatrace-agent-6.5.0.1289-unix.jar /opt/
 
 #Listen on default konakart port
 EXPOSE 8780
@@ -20,7 +20,7 @@ ENV DB_PASS dynatrace
 
 
 #Install agent
-RUN java -jar /opt/dynatrace-agent-6.2.jar -y
+RUN java -jar /opt/dynatrace-agent-6.5.0.1289-unix.jar -y
 
 
 #Run konakart
